@@ -5,21 +5,81 @@ import Layout from "../layouts/Layout.astro";
 ---
 <Layout>
 <div class= "flex flex-col justify-center align-top">
-    <div class="p-2 m-2 flex flex-row items-center">
+    <div class="p-2 m-2 flex flex-row justify-center items-center">
         <div class="flex flex-col items-center h-max m-2">
-              <p class="mb-2">Download either the true type font file or the open text font file from this website</p>
-              <button class="p-2">Download ttf file</button>
-              <button class="p-2">Download otf file</button>
+              <p class="mb-4">Download either the true type font file or the open text font file from this website</p>
+              <button class="p-2 mb-2 bg-blue-600 rounded-md">Download ttf file</button>
+              <button class="p-2  bg-blue-600 rounded-md">Download otf file</button>
         </div>
         <img width="30%" src="https://placehold.co/400" alt="">
     </div>
-    <div class="p-2 m-2 flex flex-row-reverse items-center">
-        <p>Double click the file to open the whizard and click install</p>
-        <img width="30%" src="https://placehold.co/400" alt="">
+    <div class="flex justify-center flex-col text-center">
+        <h2 class="p-2 m-2">Choose Your Operating System</h2>
+        <div class="flex justify-evenly items-center m-2">
+            <button onclick="Windows()">
+                <legend>Windows</legend>
+            </button>
+            <button onclick="Mac()">
+                <legend>MAC OS</legend>
+            </button>
+            <button onclick="Linux()">
+                <legend>Linux</legend>
+            </button>
+        </div>
     </div>
-        <div class="p-2 m-2 flex flex-row">
-        <p>Use the font anywhere in your system</p>
-        <img src="https://placehold.co/400" alt="">
+    <div id="windows">
+        <div class="p-2 m-2 flex flex-row-reverse justify-center items-center">
+            <p class="mx-5">Double click the file to open the wizard and click install</p>
+            <img width="30%" src="https://placehold.co/400" alt="">
+        </div>
+        <div class="p-2 m-2 flex flex-row items-center justify-center">
+            <p class="mx-5">Use the font anywhere in your system</p>
+            <img width="30%" src="https://placehold.co/400" alt="">
+        </div>
     </div>
+        <div id="mac" class="hidden" >
+        <div class="p-2 m-2 flex flex-row-reverse justify-center items-center">
+            <p class="mx-4 p-3">Open the Font Book app and choose File > Add Fonts to Current User. Drag and drop the downloaded font file into the resulting dialog box.</p>
+            <img width="30%" src="https://placehold.co/400" alt="">
+        </div>
+        <div class="p-2 m-2 flex flex-row items-center justify-center">
+            <p class="mx-5">Use the font anywhere in your system</p>
+            <img width="30%" src="https://placehold.co/400" alt="">
+        </div>
+    </div>
+    <div id="linux" class="hidden">
+        <div class="p-2 m-2 flex flex-row-reverse justify-center items-center">
+            <p class="mx-5">
+                After downloading the font, use the command <code>cp Shavenakuru-Regular.ttf ~/.fonts</code>
+                to copy the font into the user's font directory.
+            </p>
+            <img width="30%" src="https://placehold.co/400" alt="">
+        </div>
+        <div class="p-2 m-2 flex flex-row items-center justify-center">
+            <p class="mx-5">Use the command <code>fc-cache -vf</code> to refresh the system's font cache. The font will be available systemwide</p>
+            <img width="30%" src="https://placehold.co/400" alt="">
+        </div>
+    </div>
+    
 </div>
 </Layout>
+<script defer>
+    const windows =  document.getElementById("windows");
+    const mac = document.getElementById("mac");
+    const linux = document.getElementById("linux");
+function Windows() {
+    windows.style.display = "block";
+    mac.style.display = "none";
+    linux.style.display = "none";
+}
+function Mac(){
+    windows.style.display = "none";
+    mac.style.display = "block";
+    linux.style.display = "none";
+}
+function Linux(){
+    windows.style.display = "none";
+    mac.style.display = "none";
+    linux.style.display = "block";
+}
+</script>
