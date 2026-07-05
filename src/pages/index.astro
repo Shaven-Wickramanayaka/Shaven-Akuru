@@ -3,36 +3,37 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<section class="flex justify-center items-center h-screen flex-col">
-		<h1 class=" text-center text-[5.5rem] md:text-[8.5rem] font-bold shaven-akuru">Shaven Akuru</h1>
-		<h3>A playful handwritten font made for <a href="https://typeface.hackclub.com/">Typeface</a></h3>
+	<section class="flex justify-center items-center h-[60vh] md:h-screen flex-col text-center">
+		<h1 class="text-[5.5rem] md:text-[8.5rem] font-bold shaven-akuru line-clamp-2 leading-19 md:leading-tight">Shaven Akuru</h1>
+		<h3 class="mt-7 text-[1.2rem] md:text-[1.6rem]">A playful handwritten font made for <u> <a href="https://typeface.hackclub.com/">Typeface</a></u></h3>
 
 	</section>
-	<div class="mt-4 text-center">
-			<p class="shaven-akuru text-6xl">The quick brown fox jumps over the lazy dog</p>
-			<p class="shaven-akuru text-5xl">The quick brown fox jumps over the lazy dog</p>
-			<p class="shaven-akuru text-4xl">The quick brown fox jumps over the lazy dog</p>
-			<p class="shaven-akuru text-3xl">The quick brown fox jumps over the lazy dog</p>
-			<p class="shaven-akuru text-2xl">The quick brown fox jumps over the lazy dog</p>
-			<p class="shaven-akuru text-xl">The quick brown fox jumps over the lazy dog</p>
+	<div class=" text-center h-[30vh] md:h-screen">
+			<p class="shaven-akuru text-[5vw]">The quick brown fox jumps over the lazy dog</p>
+			<p class="shaven-akuru text-[4vw]">The quick brown fox jumps over the lazy dog</p>
+			<p class="shaven-akuru text-[3vw]">The quick brown fox jumps over the lazy dog</p>
+			<p class="shaven-akuru text-[2vw]">The quick brown fox jumps over the lazy dog</p>
+			<p class="shaven-akuru text-[1.5vw]">The quick brown fox jumps over the lazy dog</p>
+			<p class="shaven-akuru text-[1vw]">The quick brown fox jumps over the lazy dog</p>
 	</div>
-	<section class=" flex flex-col align-center text-center justify-center h-screen">
-		<h2 class="text-3xl">Features</h2>
-		<div class="flex flex-row justify-around">
-			<div class="p-3">
-				<img src="https://placehold.co/400" alt="">
-				<legend>Crisp and clear characters</legend>
+	
+	<section class=" flex flex-col text-center h-screen">
+		<h2 class="text-[5rem]">Features</h2>
+		<div class="flex flex-row justify-around flex-wrap">
+			<div class=" flex justify-between flex-col text-center items-center">
+				<img src="https://placehold.co/400" alt="" class="rounded-xl w-[70vw] md:w-[80%]">
+				<legend class="p-2 m-2">Crisp and clear characters</legend>
 			</div>
-			<div class="p-3">
-				<img src="https://placehold.co/400" alt="">
-				<legend>Uneven line height for an authentic feel</legend>
+			<div class=" flex justify-between flex-col text-center items-center">
+				<img src="https://placehold.co/400" alt="" class="rounded-xl w-[70vw] md:w-[80%]">
+				<legend class="p-2 m-2">Uneven line height for an authentic feel</legend>
 			</div>
-			<div class="p-3">
-				<img src="https://placehold.co/400" alt="">
-				<legend>Sans serif based for informal nature</legend>
+			<div class=" flex justify-between flex-col text-center items-center">
+				<img src="https://placehold.co/400" alt="" class="rounded-xl w-[70vw] md:w-[80%]">
+				<legend class="p-2 m-2">Sans serif based for informal nature</legend>
 			</div>
 		</div>
-				<a href="/install">Install Font</a>
+		<!-- <a href="/install" class="mt-7 h- text-5xl">Install Font</a> -->
 	</section>
 
 </Layout>
@@ -47,7 +48,7 @@ import Layout from "../layouts/Layout.astro";
 	h2{
 		font-family: 'Shaven Akuru', serif;
 	}
-	h3{
+	h3,legend{
 		font-family: 'Roboto Slab', serif;
 	}
 	
