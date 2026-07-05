@@ -4,3 +4,10 @@
   font-family: "Shaven Akuru";
   src: url("/Shavenakuru-Regular.ttf");
 }
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("/RobotoSlab-VariableFont_wght.ttf");
+}
+.shaven-akuru {
+  font-family: "Shaven Akuru", sans-serif;
+}

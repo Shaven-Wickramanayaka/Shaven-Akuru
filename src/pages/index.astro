@@ -4,30 +4,43 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
 	<section class="flex justify-center items-center h-screen flex-col">
-		<h1 class="text-[8rem] font-bold">Shaven Akuru</h1>
-		<h2>Lorem ipsum dolor sit amut</h2>
+		<h1 class="text-[8rem] font-bold shaven-akuru">Shaven Akuru</h1>
+		<h3>A playful handwritten font made for <a href="https://typeface.hackclub.com/">Typeface</a></h3>
 	</section>
-	<section class="h-screen">
-		<h2>Features</h2>
+	<section class=" flex flex-col align-center text-center justify-center h-screen">
+		<h2 class="text-3xl">Features</h2>
 		<div class="flex flex-row justify-around">
 			<div class="p-3">
-				Add and image here
+				<img src="https://placehold.co/400" alt="">
+				<legend>Crisp and clear characters</legend>
 			</div>
-						<div class="p-3">
-				Add and image here
+			<div class="p-3">
+				<img src="https://placehold.co/400" alt="">
+				<legend>Uneven line height for an authentic feel</legend>
 			</div>
-						<div class="p-3">
-				Add and image here
+			<div class="p-3">
+				<img src="https://placehold.co/400" alt="">
+				<legend>Sans serif based for informal nature</legend>
 			</div>
 		</div>
 	</section>
 	<section class="flex justify-center items-center h-screen">
-		<button>Install Font</button>
+		<a href="/install">Install Font</a>
 	</section>
 </Layout>
 
 <style>
 	h1{
-		font-family: 'Shaven Akuru';
+		color: white;
+		background: url("https://media.istockphoto.com/id/507843358/photo/fire-flames-on-black-background.jpg?s=170667a&w=0&k=20&c=hF0fxWGpUL8d7OsI_YCDdJxXO3e8gx3rtTzeOCEdiZI=");
+		-webkit-background-clip: text;
+		   -webkit-text-fill-color: transparent;
 	}
+	h2{
+		font-family: 'Shaven Akuru', serif;
+	}
+	h3{
+		font-family: 'Roboto Slab', serif;
+	}
+	
 </style>
