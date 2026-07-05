@@ -5,26 +5,23 @@ import Layout from "../layouts/Layout.astro";
 ---
 <Layout>
 <div class= "flex flex-col justify-center align-top">
-    <div class="p-2 m-2 flex flex-row justify-center items-center">
-        <div class="flex flex-col items-start h-max m-2 p-2">
-              <p class="mb-4 text-md md:text-2xl p-2">Download either the TrueType font(.ttf) or OpenType font (.otf) from the links below</p>
+    <div class="p-2 m-2 flex flex-col justify-center items-center text-center">
+              <h2 class="mb-4 text-md md:text-2xl p-2">Download either the TrueType font(.ttf) or OpenType font (.otf) from the links below</h2>
               <button class="p-2 mb-2 bg-blue-600 rounded-md">TrueType(.ttf) file</button>
               <button class="p-2  bg-blue-600 rounded-md">OpenType(.otf) file</button>
               <small class="p-2 my-3"><a href="https://designerly.com/otf-vs-ttf-fonts/">Whats the difference?</a></small>
-        </div>
-        <img width="30%" src="https://placehold.co/400" alt="">
     </div>
     <div class="flex justify-center flex-col text-center">
-        <h2 class="p-2 m-2">Choose Your Operating System</h2>
+        <h2 class="p-2 m-2 text-4xl">Choose Your Operating System</h2>
         <div class="flex justify-evenly items-center m-2">
             <button onclick="Windows()">
-                <legend>Windows</legend>
+                <legend class="font-bold">Windows</legend>
             </button>
             <button onclick="Mac()">
-                <legend>MAC OS</legend>
+                <legend class="font-bold">MAC OS</legend>
             </button>
             <button onclick="Linux()">
-                <legend>Linux</legend>
+                <legend class="font-bold">Linux</legend>
             </button>
         </div>
     </div>
@@ -85,10 +82,15 @@ function Linux(){
 }
 </script>
 <style>
-    p{
+
+    h2{
+      font-family: 'Roboto Slab', serif;
+    }
+    p,legend{
         font-family: 'Roboto Slab', serif;
     }
-    legend{
+    
+    small{
         font-family: 'Raleway',sans-serif;
     }
     </style>

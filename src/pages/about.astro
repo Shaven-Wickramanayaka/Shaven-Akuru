@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 ---
 <Layout>
- <div class="flex flex-col">
+ <div class="flex flex-col justify-evenly h-screen">
     <div class="p-2 m-2 flex flex-row w-fit items-center justify-around">
         <img src="https://placehold.co/400" width="30%" alt="">
         <p class="ml-3 p-2 text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo quas amet exercitationem repellendus doloribus quia voluptatum at quidem! Sit quas temporibus deleniti corrupti perferendis architecto perspiciatis laudantium nulla obcaecati sunt?</p>
@@ -10,6 +10,11 @@ import Layout from "../layouts/Layout.astro";
     <div class="p-2 m-2 flex flex-row w-fit items-center justify-around">
         <p class="text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo quas amet exercitationem repellendus doloribus quia voluptatum at quidem! Sit quas temporibus deleniti corrupti perferendis architecto perspiciatis laudantium nulla obcaecati sunt?</p>
         <img src="https://placehold.co/400" width="30%" alt="">
-    </div>
+        </div>
  </div>
 </Layout>
+<style>
+    p{
+        font-family: 'Raleway', sans-serif;
+    }
+</style>
