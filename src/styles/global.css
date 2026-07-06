@@ -15,3 +15,17 @@
 .shaven-akuru {
   font-family: "Shaven Akuru", sans-serif;
 }
+
+@theme {
+  --color-light-background: #f7dad9;
+  --color-dark-background: #a5907e;
+  --color-light-text: #786452;
+  --color-dark-text: #443730;
+  --color-dark-accent: #550c18;
+  --color-light-passive: #550c18;
+  --color-light-active: #786452;
+  --color-dark-passive: #f7dad9;
+  --color-dark-active: #a5907e;
+
+  --font-shaven-akuru: "Shaven Akuru", sans-serif;
+}
