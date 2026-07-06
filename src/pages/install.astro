@@ -1,35 +1,31 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-
 ---
 <Layout>
-    <!-- https://coolors.co/f5e0b7-d6ba73-8bbf9f-857e7b-59344f
-     
-    https://coolors.co/550c18-443730-786452-a5907e-f7dad9
-    -->
-<div class= "flex flex-col justify-center align-top">
-    <div class="p-2 m-2 flex flex-col justify-center items-center text-center ">
-              <h2 class="mb-4 text-md md:text-2xl p-2 text-dark-text">Download either the TrueType font(.ttf) or OpenType font (.otf) from the links below</h2>
-              <button class="p-2 mb-2 bg-dark-background hover:bg-dark-text active:bg-dark-accent rounded-md">TrueType(.ttf) file</button>
-              <button class="p-2  bg-dark-background hover:bg-dark-text active:bg-dark-accent rounded-md">OpenType(.otf) file</button>
-              <small class="p-2 my-3"><a href="https://designerly.com/otf-vs-ttf-fonts/"><u>Whats the difference?</u></a></small>
-    </div>
-    <div class="flex justify-center flex-col text-center">
-        <h2 class="p-2 m-2 text-4xl text-dark-text">Choose Your Operating System</h2>
-        <div class="flex justify-evenly items-center m-2 text-dark-text">
-            <button onclick="Windows()">
+
+<div class= "flex flex-col justify-center  items-center align-top">
+    <div class="p-2 mt-6 flex flex-col justify-center items-center text-center bg-light-text w-[80vw] md:w-3xl rounded-2xl">
+            <h2 class="mb-4 text-md md:text-2xl p-2 text-dark-passive font-roboto-slab">Download either the TrueType font(.ttf) or OpenType font (.otf) from the links below</h2>
+            <button class="p-2 mb-2 bg-dark-background hover:bg-dark-text active:bg-dark-accent hover:text-dark-active active:text-dark-active rounded-md font-raleway font-semibold">TrueType(.ttf) file</button>
+            <button class="p-2  bg-dark-background hover:bg-dark-text active:bg-dark-accent hover:text-dark-active active:text-dark-active rounded-md font-raleway font-semibold">OpenType(.otf) file</button>
+            <small class="p-2 my-3"><a href="https://designerly.com/otf-vs-ttf-fonts/"><u>Whats the difference?</u></a></small>
+        </div>
+        <div class="flex justify-center flex-col text-center">
+        <h2 class="p-2 m-2 mt-10 text-4xl text-dark-text font-shaven-akuru">Choose Your Operating System</h2>
+        <div class="flex justify-evenly items-center m-2 text-dark-text font-roboto-slab">
+            <button id="windows-button" onclick="Windows()" class="selected p-2 rounded-md">
                 <legend class="font-bold">Windows</legend>
             </button>
-            <button onclick="Mac()">
+            <button id="mac-button" onclick="Mac()" class="p-2 rounded-md">
                 <legend class="font-bold">MAC OS</legend>
             </button>
-            <button onclick="Linux()">
+            <button id="linux-button" onclick="Linux()" class="p-2 rounded-md">
                 <legend class="font-bold">Linux</legend>
             </button>
         </div>
     </div>
-    <div id="windows" class="text-dark-text">
+    <div id="windows" class="text-dark-text font-raleway font-semibold">
         <div class="p-2 m-2 flex flex-row-reverse justify-center items-center">
             <p class="mx-5">Double click the file to open the wizard and click install</p>
             <img width="30%" src="https://placehold.co/400" alt="" class="rounded-xl">
@@ -39,7 +35,7 @@ import Layout from "../layouts/Layout.astro";
             <img width="30%" src="https://placehold.co/400" alt="" class="rounded-xl">
         </div>
     </div>
-        <div id="mac" class="hidden text-dark-text" >
+        <div id="mac" class="hidden text-dark-text font-raleway font-semibold" >
         <div class="p-2 m-2 flex flex-row-reverse justify-center items-center">
             <p class="mx-4 p-3">Open the Font Book app and choose File > Add Fonts to Current User. Drag and drop the downloaded font file into the resulting dialog box.</p>
             <img width="30%" src="https://placehold.co/400" alt="" class="rounded-xl">
@@ -49,7 +45,7 @@ import Layout from "../layouts/Layout.astro";
             <img width="30%" src="https://placehold.co/400" alt="" class="rounded-xl">
         </div>
     </div>
-    <div id="linux" class="hidden text-dark-text">
+    <div id="linux" class="hidden text-dark-text font-raleway font-semibold">
         <div class="p-2 m-2 flex flex-row-reverse justify-center items-center">
             <p class="mx-5">
                 After downloading the font, use the command <code>cp Shavenakuru-Regular.ttf ~/.fonts</code> to copy the font into the user's font directory.
@@ -68,32 +64,42 @@ import Layout from "../layouts/Layout.astro";
     const windows =  document.getElementById("windows");
     const mac = document.getElementById("mac");
     const linux = document.getElementById("linux");
+
+    const windowsButton = document.getElementById('windows-button');
+    const macButton = document.getElementById('mac-button');
+    const linuxButton = document.getElementById('linux-button')
 function Windows() {
     windows.style.display = "block";
     mac.style.display = "none";
     linux.style.display = "none";
+
+    windowsButton.classList.add('selected');
+    macButton.classList.remove('selected');
+    linuxButton.classList.remove('selected');
 }
 function Mac(){
     windows.style.display = "none";
     mac.style.display = "block";
     linux.style.display = "none";
+
+    windowsButton.classList.remove('selected');
+    macButton.classList.add('selected');
+    linuxButton.classList.remove('selected');
 }
 function Linux(){
     windows.style.display = "none";
     mac.style.display = "none";
     linux.style.display = "block";
+
+    
+    windowsButton.classList.remove('selected');
+    macButton.classList.remove('selected');
+    linuxButton.classList.add('selected');
 }
 </script>
 <style>
+    .selected{
+        background-color: var(--color-dark-background);
 
-    h2{
-      font-family: 'Roboto Slab', serif;
     }
-    p,legend{
-        font-family: 'Roboto Slab', serif;
-    }
-    
-    small{
-        font-family: 'Raleway',sans-serif;
-    }
-    </style>
+</style>
