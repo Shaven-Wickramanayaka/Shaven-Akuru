@@ -7,8 +7,8 @@ import Layout from "../layouts/Layout.astro";
 <div class= "flex flex-col justify-center  items-center align-top">
     <div class="p-2 mt-6 flex flex-col justify-center items-center text-center bg-light-text w-[80vw] md:w-3xl rounded-2xl">
             <h2 class="mb-4 text-md md:text-2xl p-2 text-dark-passive font-roboto-slab">Download either the TrueType font(.ttf) or OpenType font (.otf) from the links below</h2>
-            <button class="p-2 mb-2 bg-dark-background hover:bg-dark-text active:bg-dark-accent hover:text-dark-active active:text-dark-active rounded-md font-raleway font-semibold">TrueType(.ttf) file</button>
-            <button class="p-2  bg-dark-background hover:bg-dark-text active:bg-dark-accent hover:text-dark-active active:text-dark-active rounded-md font-raleway font-semibold">OpenType(.otf) file</button>
+            <a href="/Shavenakuru-Regular.ttf" class="p-2 mb-2 bg-dark-background hover:bg-dark-text active:bg-dark-accent hover:text-dark-active active:text-dark-active rounded-md font-raleway font-semibold">TrueType(.ttf) file</a>
+            <a href="/Shavenakuru-Regular.otf" class="p-2  bg-dark-background hover:bg-dark-text active:bg-dark-accent hover:text-dark-active active:text-dark-active rounded-md font-raleway font-semibold">OpenType(.otf) file</a>
             <small class="p-2 my-3"><a href="https://designerly.com/otf-vs-ttf-fonts/"><u>Whats the difference?</u></a></small>
         </div>
         <div class="flex justify-center flex-col text-center">
@@ -25,36 +25,36 @@ import Layout from "../layouts/Layout.astro";
             </button>
         </div>
     </div>
-    <div id="windows" class="text-dark-text font-raleway font-semibold">
-        <div class="p-2 m-2 flex flex-row-reverse justify-center items-center">
+    <div id="windows" class="text-dark-text font-raleway font-semibold w-[90vw] md:w-[80vw] text-2xl">
+        <div class="p-2 m-2 flex flex-row-reverse justify-center items-center ">
             <p class="mx-5">Double click the file to open the wizard and click install</p>
-            <img width="30%" src="https://placehold.co/400" alt="" class="rounded-xl">
+            <video muted autoplay loop width="30%" src="src/assets/windows 1.mp4" class="rounded-xl shadow-2xl shadow-dark-text"></video>
         </div>
         <div class="p-2 m-2 flex flex-row items-center justify-center">
             <p class="mx-5">Use the font anywhere in your system</p>
-            <img width="30%" src="https://placehold.co/400" alt="" class="rounded-xl">
+            <video muted autoplay loop src="src/assets/windows 2.mp4" class="rounded-xl shadow-2xl shadow-dark-text" width="30%"></video>
         </div>
     </div>
-        <div id="mac" class="hidden text-dark-text font-raleway font-semibold" >
+        <div id="mac" class="hidden text-dark-text font-raleway font-semibold w-[90vw] md:w-[80vw] text-2xl" >
         <div class="p-2 m-2 flex flex-row-reverse justify-center items-center">
             <p class="mx-4 p-3">Open the Font Book app and choose File > Add Fonts to Current User. Drag and drop the downloaded font file into the resulting dialog box.</p>
             <img width="30%" src="https://placehold.co/400" alt="" class="rounded-xl">
         </div>
         <div class="p-2 m-2 flex flex-row items-center justify-center">
             <p class="mx-5">Close the application. The font should now be available to use on your system</p>
-            <img width="30%" src="https://placehold.co/400" alt="" class="rounded-xl">
+
         </div>
     </div>
-    <div id="linux" class="hidden text-dark-text font-raleway font-semibold">
+    <div id="linux" class="hidden text-dark-text font-raleway font-semibold w-[90vw] md:w-[80vw] text-2xl">
         <div class="p-2 m-2 flex flex-row-reverse justify-center items-center">
             <p class="mx-5">
                 After downloading the font, use the command <code>cp Shavenakuru-Regular.ttf ~/.fonts</code> to copy the font into the user's font directory.
             </p>
-            <img width="30%" src="https://placehold.co/400" alt="" class="rounded-xl">
+            <video muted src="src/assets/linux 1.mp4" autoplay loop class="rounded-xl shadow-2xl" width="30%"></video>
         </div>
         <div class="p-2 m-2 flex flex-row items-center justify-center">
             <p class="mx-5">Use the command <code>fc-cache -vf</code> to refresh the system's font cache. The font will be available systemwide</p>
-            <img width="30%" src="https://placehold.co/400" alt="" class="rounded-xl">
+           <video muted autoplay loop width="30%" src="src/assets/linux 2.mp4" class="rounded-xl shadow-2xl shadow-dark-text"></video>
         </div>
     </div>
     

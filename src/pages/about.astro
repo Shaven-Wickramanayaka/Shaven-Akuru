@@ -12,9 +12,50 @@ import Layout from "../layouts/Layout.astro";
         <img src="https://placehold.co/400" width="30%" alt="" class="rounded-2xl">
         </div>
  </div>
+ <section class="h-[50vw] font-shaven-akuru flex flex-col items-center justify-self-center text-2xl bg-dark-background md:w-[90vw] rounded-2xl">
+    <h2 class="font-roboto-slab">Experience the font</h2>
+    <h3 class="font-raleway">Drag and drop the letters to create words</h3>
+    <div class="flex flex-row font-shaven-akuru mt-5">
+            <p class="letter inline-bloc p-2 text-4xl">A</p>
+            <p class="letter inline-bloc p-2 text-4xl">B</p>
+                        <p class="letter inline-bloc p-2 text-4xl">C</p>
+            <p class="letter inline-bloc p-2 text-4xl">D</p>
+                        <p class="letter inline-bloc p-2 text-4xl">E</p>
+            <p class="letter inline-bloc p-2 text-4xl">F</p>
+                        <p class="letter inline-bloc p-2 text-4xl">G</p>
+            <p class="letter inline-bloc p-2 text-4xl">H</p>
+                        <p class="letter inline-bloc p-2 text-4xl">I</p>
+            <p class="letter inline-bloc p-2 text-4xl">J</p>
+                        <p class="letter inline-bloc p-2 text-4xl">K</p>
+            <p class="letter inline-bloc p-2 text-4xl">L</p>
+                        <p class="letter inline-bloc p-2 text-4xl">M</p>
+            <p class="letter inline-bloc p-2 text-4xl">N</p>
+                        <p class="letter inline-bloc p-2 text-4xl">O</p>
+            <p class="letter inline-bloc p-2 text-4xl">P</p>
+                        <p class="letter inline-bloc p-2 text-4xl">Q</p>
+            <p class="letter inline-bloc p-2 text-4xl">R</p>
+                        <p class="letter inline-bloc p-2 text-4xl">S</p>
+            <p class="letter inline-bloc p-2 text-4xl">T</p>
+                        <p class="letter inline-bloc p-2 text-4xl">U</p>
+            <p class="letter inline-bloc p-2 text-4xl">V</p>
+                        <p class="letter inline-bloc p-2 text-4xl">W</p>
+            <p class="letter inline-bloc p-2 text-4xl">X</p>
+                        <p class="letter inline-bloc p-2 text-4xl">Y</p>
+            <p class="letter inline-bloc p-2 text-4xl">Z</p>
+    </div>
+
+     
+ </section>
 </Layout>
 <style>
-    p{
-        font-family: 'Raleway', sans-serif;
-    }
+
 </style>
+
+<script>
+import { gsap } from "gsap";
+    
+import { Draggable } from "gsap/Draggable";
+
+gsap.registerPlugin(Draggable);
+Draggable.create(".letter");
+</script>
