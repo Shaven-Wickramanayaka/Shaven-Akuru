@@ -2,21 +2,17 @@
 import Layout from "../layouts/Layout.astro";
 ---
 <Layout>
- <div class="flex flex-col justify-evenly items-center h-screen text-dark-text font-semibold">
+ <div class="flex flex-col justify-evenly items-center text-dark-text font-semibold">
     <div class="p-2 m-2 flex flex-row w-fit items-center justify-around md:w-[70vw]">
-        <img src="https://placehold.co/400" width="30%" alt="" class="rounded-2xl">
-        <p class="ml-3 p-2 text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo quas amet exercitationem repellendus doloribus quia voluptatum at quidem! Sit quas temporibus deleniti corrupti perferendis architecto perspiciatis laudantium nulla obcaecati sunt?</p>
+        <p class="ml-3 p-2 text-center text-2xl font-shaven-akuru">Akuru is the direct translation of letters in Sinhala.  Inspired by my notoriously messy handwriting, the font aims to capture the frantic line strokes of an A Level student working their way through a written physics question five minutes before the test ends. The font combines various embellishments within letters and uneven line strokes to capture that frantic essence for use in digital media.</p>
     </div>
-    <div class="p-2 m-2 flex flex-row w-fit items-center justify-around md:w-[70vw]">
-        <p class="text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo quas amet exercitationem repellendus doloribus quia voluptatum at quidem! Sit quas temporibus deleniti corrupti perferendis architecto perspiciatis laudantium nulla obcaecati sunt?</p>
-        <img src="https://placehold.co/400" width="30%" alt="" class="rounded-2xl">
-        </div>
+
  </div>
- <section class="h-[30vw] m-5 font-shaven-akuru flex flex-col items-center justify-between justify-self-center text-2xl bg-dark-background md:w-[90vw] rounded-2xl">
+ <section class=" h-[90vh] md:h-[30vw] m-5 font-shaven-akuru flex flex-col items-center justify-between justify-self-center text-2xl bg-dark-background md:w-[90vw] rounded-2xl text-center">
     <div class="flex flex-col items-center">
             <h2 class="font-roboto-slab p-2 m-2">Experience the font</h2>
     <h3 class="font-raleway">Drag and drop the letters to create words</h3>
-    <div class="flex flex-row font-shaven-akuru mt-5" id="letterbox">
+    <div class="flex flex-row flex-wrap font-shaven-akuru mt-5 justify-center">
             <p class="letter inline-bloc p-2 text-4xl">A</p>
             <p class="letter inline-bloc p-2 text-4xl">B</p>
             <p class="letter inline-bloc p-2 text-4xl">C</p>
@@ -46,7 +42,7 @@ import Layout from "../layouts/Layout.astro";
     </div>
     </div>
 
-  <button class="justify-self-end p-2  m-2 rounded-xl bg-dark-text text-dark-active">Reset</button>
+  <button onclick="ResetLetters()" class="justify-self-end p-2  m-2 rounded-xl bg-dark-text text-dark-active" id="reset">Reset</button>
  </section>
 
 </Layout>
@@ -54,22 +50,24 @@ import Layout from "../layouts/Layout.astro";
 
 </style>
 
+
 <script>
 import { gsap } from "gsap";
     
 import { Draggable } from "gsap/Draggable";
 
 gsap.registerPlugin(Draggable);
-Draggable.create(".letter");
+const letters = Draggable.create(".letter");
 
-const letters = document.getElementById('letterbox')?.children;
+// const letters = document.getElementsByClassName("letter");
 function ResetLetters(){
-    for(var i in letters){
-        const element = letters[i];
-        gsap.to(element, {
+    letters.forEach(letter => {
+        gsap.set(letter.target, {
             x: 0,
             y: 0
         });
-    }
+        letter.update();
+    })
 }
+document.getElementById("reset")?.addEventListener('click', ResetLetters)
 </script>
