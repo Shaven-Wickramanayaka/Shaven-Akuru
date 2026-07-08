@@ -7,7 +7,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   site: "https://shaven-wickramanayaka.github.io",
   base: "/Shaven-Akuru",
-  trailingSlash: "never",
+  trailingSlash: "always",
   build: {
     assetsPrefix: "./",
   },
