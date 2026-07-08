@@ -2,54 +2,49 @@
 import Layout from "../layouts/Layout.astro";
 ---
 <Layout>
- <div class="flex flex-col justify-evenly items-center text-dark-text font-semibold">
-    <div class="p-2 m-2 flex flex-row w-fit items-center justify-around md:w-[70vw]">
-        <p class="ml-3 p-2 text-center text-2xl font-shaven-akuru">Akuru is the direct translation of letters in Sinhala.  Inspired by my notoriously messy handwriting, the font aims to capture the frantic line strokes of an A Level student working their way through a written physics question five minutes before the test ends. The font combines various embellishments within letters and uneven line strokes to capture that frantic essence for use in digital media.</p>
-    </div>
+    <div class="flex flex-col justify-evenly items-center text-dark-text font-semibold">
+        <div class="p-2 m-2 flex flex-row w-fit items-center justify-around md:w-[70vw]">
+            <p class="ml-3 p-2 text-center text-2xl font-shaven-akuru">Akuru is the direct translation of letters in Sinhala.  Inspired by my notoriously messy handwriting, the font aims to capture the frantic line strokes of an A Level student working their way through a written physics question five minutes before the test ends. The font combines various embellishments within letters and uneven line strokes to capture that frantic essence for use in digital media.</p>
+        </div>
 
- </div>
- <section class=" h-[90vh] md:h-[30vw] m-5 font-shaven-akuru flex flex-col items-center justify-between justify-self-center text-2xl bg-dark-background md:w-[90vw] rounded-2xl text-center">
-    <div class="flex flex-col items-center">
+    </div>
+    <section class=" h-[90vh] md:h-[30vw] m-5 font-shaven-akuru flex flex-col items-center justify-between justify-self-center text-2xl bg-dark-background md:w-[90vw] rounded-2xl text-center">
+        <div class="flex flex-col items-center">
             <h2 class="font-roboto-slab p-2 m-2">Experience the font</h2>
-    <h3 class="font-raleway">Drag and drop the letters to create words</h3>
-    <div class="flex flex-row flex-wrap font-shaven-akuru mt-5 justify-center">
-            <p class="letter inline-bloc p-2 text-4xl">A</p>
-            <p class="letter inline-bloc p-2 text-4xl">B</p>
-            <p class="letter inline-bloc p-2 text-4xl">C</p>
-            <p class="letter inline-bloc p-2 text-4xl">D</p>
-            <p class="letter inline-bloc p-2 text-4xl">E</p>
-            <p class="letter inline-bloc p-2 text-4xl">F</p>
-            <p class="letter inline-bloc p-2 text-4xl">G</p>
-            <p class="letter inline-bloc p-2 text-4xl">H</p>
-            <p class="letter inline-bloc p-2 text-4xl">I</p>
-            <p class="letter inline-bloc p-2 text-4xl">J</p>
-            <p class="letter inline-bloc p-2 text-4xl">K</p>
-            <p class="letter inline-bloc p-2 text-4xl">L</p>
-            <p class="letter inline-bloc p-2 text-4xl">M</p>
-            <p class="letter inline-bloc p-2 text-4xl">N</p>
-            <p class="letter inline-bloc p-2 text-4xl">O</p>
-            <p class="letter inline-bloc p-2 text-4xl">P</p>
-            <p class="letter inline-bloc p-2 text-4xl">Q</p>
-            <p class="letter inline-bloc p-2 text-4xl">R</p>
-            <p class="letter inline-bloc p-2 text-4xl">S</p>
-            <p class="letter inline-bloc p-2 text-4xl">T</p>
-            <p class="letter inline-bloc p-2 text-4xl">U</p>
-            <p class="letter inline-bloc p-2 text-4xl">V</p>
-            <p class="letter inline-bloc p-2 text-4xl">W</p>
-            <p class="letter inline-bloc p-2 text-4xl">X</p>
-            <p class="letter inline-bloc p-2 text-4xl">Y</p>
-            <p class="letter inline-bloc p-2 text-4xl">Z</p>
-    </div>
-    </div>
-
-  <button onclick="ResetLetters()" class="justify-self-end p-2  m-2 rounded-xl bg-dark-text text-dark-active" id="reset">Reset</button>
- </section>
+            <h3 class="font-raleway">Drag and drop the letters to create words</h3>
+            <div class="flex flex-row flex-wrap font-shaven-akuru mt-5 justify-center">
+                <p class="letter inline-bloc p-2 text-4xl">A</p>
+                <p class="letter inline-bloc p-2 text-4xl">B</p>
+                <p class="letter inline-bloc p-2 text-4xl">C</p>
+                <p class="letter inline-bloc p-2 text-4xl">D</p>
+                <p class="letter inline-bloc p-2 text-4xl">E</p>
+                <p class="letter inline-bloc p-2 text-4xl">F</p>
+                <p class="letter inline-bloc p-2 text-4xl">G</p>
+                <p class="letter inline-bloc p-2 text-4xl">H</p>
+                <p class="letter inline-bloc p-2 text-4xl">I</p>
+                <p class="letter inline-bloc p-2 text-4xl">J</p>
+                <p class="letter inline-bloc p-2 text-4xl">K</p>
+                <p class="letter inline-bloc p-2 text-4xl">L</p>
+                <p class="letter inline-bloc p-2 text-4xl">M</p>
+                <p class="letter inline-bloc p-2 text-4xl">N</p>
+                <p class="letter inline-bloc p-2 text-4xl">O</p>
+                <p class="letter inline-bloc p-2 text-4xl">P</p>
+                <p class="letter inline-bloc p-2 text-4xl">Q</p>
+                <p class="letter inline-bloc p-2 text-4xl">R</p>
+                <p class="letter inline-bloc p-2 text-4xl">S</p>
+                <p class="letter inline-bloc p-2 text-4xl">T</p>
+                <p class="letter inline-bloc p-2 text-4xl">U</p>
+                <p class="letter inline-bloc p-2 text-4xl">V</p>
+                <p class="letter inline-bloc p-2 text-4xl">W</p>
+                <p class="letter inline-bloc p-2 text-4xl">X</p>
+                <p class="letter inline-bloc p-2 text-4xl">Y</p>
+                <p class="letter inline-bloc p-2 text-4xl">Z</p>
+            </div>
+        </div>
+    <button onclick="ResetLetters()" class="justify-self-end p-2  m-2 rounded-xl bg-dark-text text-dark-active" id="reset">Reset</button>
+    </section>
 
 </Layout>
-<style>
-
-</style>
-
 
 <script>
 import { gsap } from "gsap";
@@ -58,8 +53,6 @@ import { Draggable } from "gsap/Draggable";
 
 gsap.registerPlugin(Draggable);
 const letters = Draggable.create(".letter");
-
-// const letters = document.getElementsByClassName("letter");
 function ResetLetters(){
     letters.forEach(letter => {
         gsap.set(letter.target, {

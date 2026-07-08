@@ -10,8 +10,8 @@ import Layout from "../layouts/Layout.astro";
             <a href="/Shaven-Akuru/Shavenakuru-Regular.ttf" class="p-2 mb-2 bg-dark-background hover:bg-dark-text active:bg-dark-accent hover:text-dark-active active:text-dark-active rounded-md font-raleway font-semibold">TrueType(.ttf) file</a>
             <a href="/Shaven-Akuru/Shavenakuru-Regular.otf" class="p-2  bg-dark-background hover:bg-dark-text active:bg-dark-accent hover:text-dark-active active:text-dark-active rounded-md font-raleway font-semibold">OpenType(.otf) file</a>
             <small class="p-2 my-3"><a href="https://designerly.com/otf-vs-ttf-fonts/"><u>Whats the difference?</u></a></small>
-        </div>
-        <div class="flex justify-center flex-col text-center">
+    </div>
+    <div class="flex justify-center flex-col text-center">
         <h2 class="p-2 m-2 mt-10 text-4xl text-dark-text font-shaven-akuru">Choose Your Operating System</h2>
         <div class="flex justify-evenly items-center m-2 text-dark-text font-roboto-slab">
             <button id="windows-button" onclick="Windows()" class="selected p-2 rounded-md">
@@ -41,7 +41,6 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <div class="p-2 m-2 flex flex-row items-center justify-center">
             <p class="mx-5">Close the application. The font should now be available to use on your system</p>
-
         </div>
         <iframe class="justify-self-center m-5 h-[40vh]" src="https://www.youtube.com/embed/P-njy5pH5U4?si=tHcrbom938BAwTJK" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
@@ -64,11 +63,11 @@ import Layout from "../layouts/Layout.astro";
     const windows =  document.getElementById("windows");
     const mac = document.getElementById("mac");
     const linux = document.getElementById("linux");
-
     const windowsButton = document.getElementById('windows-button');
     const macButton = document.getElementById('mac-button');
     const linuxButton = document.getElementById('linux-button')
 function Windows() {
+
     windows.style.display = "block";
     mac.style.display = "none";
     linux.style.display = "none";
@@ -78,6 +77,7 @@ function Windows() {
     linuxButton.classList.remove('selected');
 }
 function Mac(){
+
     windows.style.display = "none";
     mac.style.display = "block";
     linux.style.display = "none";
@@ -87,11 +87,10 @@ function Mac(){
     linuxButton.classList.remove('selected');
 }
 function Linux(){
+
     windows.style.display = "none";
     mac.style.display = "none";
     linux.style.display = "block";
-
-    
     windowsButton.classList.remove('selected');
     macButton.classList.remove('selected');
     linuxButton.classList.add('selected');
@@ -100,6 +99,5 @@ function Linux(){
 <style>
     .selected{
         background-color: var(--color-dark-background);
-
     }
 </style>

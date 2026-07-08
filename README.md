@@ -1,4 +1,4 @@
-# Shaven Akuru
+# Shaven Akuru -
 
 ## A handwritten font bult for Typeface by HackClub. The repository contains the font and the landing page for it.
 
