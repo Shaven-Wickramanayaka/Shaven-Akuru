@@ -2,15 +2,15 @@
 
 @font-face {
   font-family: "Shaven Akuru";
-  src: url("/shaven-akuru/Shavenakuru-Regular.ttf");
+  src: url("/Shaven-Akuru/Shavenakuru-Regular.ttf");
 }
 @font-face {
   font-family: "Roboto Slab";
-  src: url("/shaven-akuru/RobotoSlab-VariableFont_wght.ttf");
+  src: url("/Shaven-Akuru/RobotoSlab-VariableFont_wght.ttf");
 }
 @font-face {
   font-family: "Raleway";
-  src: url("/shaven-akuru/Raleway-VariableFont_wght.ttf");
+  src: url("/Shaven-Akuru/Raleway-VariableFont_wght.ttf");
 }
 
 @theme {
