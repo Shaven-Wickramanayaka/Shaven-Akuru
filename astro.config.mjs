@@ -8,9 +8,6 @@ export default defineConfig({
   site: "https://shaven-wickramanayaka.github.io",
   base: "/Shaven-Akuru",
   trailingSlash: "always",
-  build: {
-    assetsPrefix: "./",
-  },
   vite: {
     plugins: [tailwindcss()],
   },
